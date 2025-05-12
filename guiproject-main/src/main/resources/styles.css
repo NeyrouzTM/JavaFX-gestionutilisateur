@@ -3,6 +3,17 @@
     -fx-font-family: "Arial";
     -fx-background-color: #2C2F33;
     -fx-padding: 15;
+    -fx-background-image: url('/Images/smart.png');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* Pour assurer la lisibilité du contenu sur l'image d'arrière-plan */
+.vbox, .hbox {
+    -fx-background-color: rgba(44, 47, 51, 0.9);
+    -fx-background-radius: 10;
+    -fx-padding: 15;
 }
 
 /* Labels */
@@ -10,11 +21,12 @@
     -fx-text-fill: #FFFFFF;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 2, 0, 0, 1);
 }
 
 /* Text Fields and Password Fields */
 .text-field, .password-field {
-    -fx-background-color: #40444B;
+    -fx-background-color: rgba(64, 68, 75, 0.9);
     -fx-text-fill: #FFFFFF;
     -fx-prompt-text-fill: #AAAAAA;
     -fx-border-color: #666;
