@@ -26,7 +26,9 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
         <TextField fx:id="searchField" promptText="Rechercher un utilisateur..." HBox.hgrow="ALWAYS"/>
         <Button text="Rechercher" onAction="#handleSearch" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+        <Button text="Filtrer Actifs" onAction="#handleFilterActive" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
         <Button text="Actualiser" onAction="#handleRefresh" style="-fx-background-color: #FF9800; -fx-text-fill: white;"/>
+        <Button text="Exporter PDF" onAction="#handleExportPDF" style="-fx-background-color: #9C27B0; -fx-text-fill: white;"/>
     </HBox>
 
     <TableView fx:id="usersTable" VBox.vgrow="ALWAYS">

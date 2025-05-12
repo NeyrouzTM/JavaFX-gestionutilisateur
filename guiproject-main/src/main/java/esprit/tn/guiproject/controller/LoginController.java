@@ -26,6 +26,17 @@ public class LoginController {
         authService = new AuthService();
         typeCombo.getItems().addAll("Utilisateur", "Manager");
         typeCombo.setValue("Utilisateur");
+        
+        // Configuration du champ de mot de passe
+        passwordField.setPromptText("Mot de passe");
+        passwordField.setStyle("-fx-font-size: 14px;");
+        
+        // Ajouter un listener pour effacer le message d'erreur quand l'utilisateur commence à taper
+        passwordField.textProperty().addListener((obs, oldVal, newVal) -> {
+            if (!newVal.isEmpty()) {
+                errorLabel.setText("");
+            }
+        });
     }
     
     @FXML

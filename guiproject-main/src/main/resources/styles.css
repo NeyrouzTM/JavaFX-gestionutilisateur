@@ -12,8 +12,8 @@
     -fx-font-weight: bold;
 }
 
-/* Text Fields */
-.text-field {
+/* Text Fields and Password Fields */
+.text-field, .password-field {
     -fx-background-color: #40444B;
     -fx-text-fill: #FFFFFF;
     -fx-prompt-text-fill: #AAAAAA;
@@ -21,11 +21,23 @@
     -fx-border-radius: 5;
     -fx-background-radius: 5;
     -fx-padding: 5 10 5 10;
+    -fx-font-size: 14px;
 }
 
-.text-field:focused {
+.text-field:focused, .password-field:focused {
     -fx-border-color: #00C4B4;
     -fx-border-width: 2;
+}
+
+/* Password Field specific styles */
+.password-field {
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+}
+
+.password-field .text {
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
 }
 
 /* Buttons */
