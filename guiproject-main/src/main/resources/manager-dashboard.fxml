@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="esprit.tn.guiproject.controller.ManagerDashboardController"
+      spacing="20">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <HBox spacing="20" alignment="CENTER_LEFT">
+        <VBox>
+            <Text fx:id="managerNameText" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+            <Text fx:id="managerEmailText" style="-fx-font-size: 16px;"/>
+        </VBox>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Mon Profil" onAction="#handleEditProfile" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+        <Button text="Déconnexion" onAction="#handleLogout" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextField fx:id="searchField" promptText="Rechercher un utilisateur..." HBox.hgrow="ALWAYS"/>
+        <Button text="Rechercher" onAction="#handleSearch" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+        <Button text="Actualiser" onAction="#handleRefresh" style="-fx-background-color: #FF9800; -fx-text-fill: white;"/>
+    </HBox>
+
+    <TableView fx:id="usersTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="nomColumn" text="Nom" prefWidth="150"/>
+            <TableColumn fx:id="prenomColumn" text="Prénom" prefWidth="150"/>
+            <TableColumn fx:id="emailColumn" text="Email" prefWidth="250"/>
+            <TableColumn fx:id="statutColumn" text="Statut" prefWidth="100"/>
+            <TableColumn fx:id="actionsColumn" text="Actions" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+</VBox> 

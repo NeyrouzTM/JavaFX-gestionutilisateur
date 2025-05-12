@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.tn.guiproject.controller.WelcomeController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Text style="-fx-font-size: 32px; -fx-font-weight: bold;" text="Smart Move"/>
+    <Text style="-fx-font-size: 18px;" text="Bienvenue sur notre plateforme"/>
+    
+    <VBox spacing="15" maxWidth="300" alignment="CENTER">
+        <Button fx:id="signInButton" text="Se connecter" onAction="#handleSignIn" 
+                maxWidth="300" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;"/>
+        
+        <Button fx:id="signUpButton" text="S'inscrire" onAction="#handleSignUp" 
+                maxWidth="300" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px;"/>
+    </VBox>
+</VBox> 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.tn.guiproject.controller.SignUpController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Smart Move - Inscription"/>
+    
+    <VBox spacing="10" maxWidth="300">
+        <TextField fx:id="nomField" promptText="Nom" maxWidth="300"/>
+        <TextField fx:id="prenomField" promptText="Prénom" maxWidth="300"/>
+        <TextField fx:id="emailField" promptText="Email" maxWidth="300"/>
+        <PasswordField fx:id="passwordField" promptText="Mot de passe" maxWidth="300"/>
+        <ComboBox fx:id="roleCombo" promptText="Type de compte" maxWidth="300"/>
+        
+        <Button fx:id="signUpButton" text="S'inscrire" onAction="#handleSignUp" 
+                maxWidth="300" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+        
+        <Button fx:id="backButton" text="Retour" onAction="#handleBack" 
+                maxWidth="300" style="-fx-background-color: #757575; -fx-text-fill: white;"/>
+    </VBox>
+    
+    <Label fx:id="errorLabel" style="-fx-text-fill: red;"/>
+</VBox> 
